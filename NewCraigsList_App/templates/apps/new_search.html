@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+
+<h4 style="text-align: center">Showing results for "{{ search | title }}"</h4>
+<div class="row">
+    {% for post in final_posts %}
+    <div class="col s4 ">
+        <div class="card" style=" width:100%;height:70%;top:0;left:0;">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{{ post.4 }}" alt="Loading Image..." width="300" height="200">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{ post.0 }}</span>
+                <p><a href="#">Posted on :{{ post.2 }}</a></p>
+                <p><a href="#">Location :{{ post.3 }}</a>
+                <p><a href="{{ post.1 }}">Apply Here</a></p>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+{% endblock content %}
